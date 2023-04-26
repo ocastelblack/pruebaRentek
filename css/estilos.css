@@ -78,6 +78,7 @@ p{
     justify-content: center;
     width: -webkit-fill-available;
     margin-block: 10px;
+    width: -moz-available;
 }
 
 .tituloF{

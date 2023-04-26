@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="contenido-header">
@@ -69,45 +70,46 @@
                 </p>
             </div>
             <div class="col-4 text-left formulario">
-                <form action="procesar_formulario.php" method="post">
+                <form action="procesar_formulario.php" id="formulario" method="post"
+                    onsubmit="return validarFormulario()">
                     <!-- Campo de texto "Names" -->
                     <div class="mb-3">
                         <label for="names" class="form-label">Names</label>
-                        <input type="text" class="form-control" id="names" name="names" required>
+                        <input type="text" class="form-control" id="names" placeholder="First & Last"
+                        name="names" required>
                     </div>
 
                     <!-- Campo de texto "Company Names" -->
                     <div class="mb-3">
                         <label for="companyNames" class="form-label">Company Names</label>
-                        <input type="text" class="form-control" id="companyNames" name="companyNames" required>
+                        <input type="text" class="form-control" id="companyNames" placeholder="First Legal Name"
+                        name="companyNames" required>
                     </div>
 
                     <!-- Campo de texto "Phone Number" -->
                     <div class="mb-3">
                         <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                         <input type="tel" class="form-control" id="phoneNumber" placeholder="000 000 0000"
+                         name="phoneNumber" pattern="[0-9]+" required>
                     </div>
 
                     <!-- Campo de texto "Company Email" -->
                     <div class="mb-3">
                         <label for="companyEmail" class="form-label">Company Email</label>
-                        <input type="email" class="form-control" id="companyEmail" name="companyEmail" required>
+                        <input type="email" class="form-control" id="companyEmail" placeholder="name@company.com"
+                         name="companyEmail" required>
                     </div>
 
                     <!-- Opciones de selección "Solution Type" -->
                     <div class="mb-3">
                         <label class="form-label">Solution Type</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="solutionType[]" value="factoring" id="factoring">
-                            <label class="form-check-label" for="factoring">
-                                Factoring
-                            </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Type" id="Type_factoring" value="factoring">
+                            <label class="form-check-label" for="Type_factoring">Factoring</label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="solutionType[]" value="fluer" id="fluer">
-                            <label class="form-check-label" for="fluer">
-                                Fluer
-                            </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Type" id="Type_Fluer" value="Fluer">
+                            <label class="form-check-label" for="Type_Fluer">Fluer</label>
                         </div>
                     </div>
                      <!-- Opciones de selección "Refere" -->
@@ -120,6 +122,10 @@
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="refere" id="refere_no" value="no">
                             <label class="form-check-label" for="refere_no">No</label>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="NameRefere" placeholder="Who did refer you?"
+                            name="NameRefere">
                         </div>
                     </div>
 
@@ -254,7 +260,7 @@
                 <img src="img/icons/Logo_de_Facebook.png" alt="">
                 <img src="img/icons//instagram-logo-png.png" alt="">
                 <img src="img/icons/logoTwiter.png" alt="">
-                <img src="img/icons/whatssap.PNG" alt="">
+                <img src="img/icons/logowhatsap.png" alt="">
                 <img src="img/icons/Youtube_logo.png" alt="">
             </a>
         </div>
@@ -283,6 +289,42 @@
             <p>(786) 206-3674</p>
         </article>
     </footer>
+
+    <!-- Modal de éxito -->
+        <div class="modal fade" id="modal-exito" tabindex="-1" aria-labelledby="modal-exito-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-exito-label">Formulario enviado exitosamente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Gracias por su mensaje. Nos pondremos en contacto con usted lo antes posible.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal de error -->
+    <div class="modal fade" id="modal-error" tabindex="-1" aria-labelledby="modal-error-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-error-label">Error al enviar el formulario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p id="mensaje"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
