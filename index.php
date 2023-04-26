@@ -55,11 +55,20 @@
                 </div>
             </div>
     </nav>
-   
-    <div class="container">
-        <img src="img/background.jpg" alt="Imagen de fondo" class="img-fluid" id="bgImage">
-        <div class="row">
-            <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+
+    <div class="imagenFondo">
+        <div class="row justify-content-center">
+            <div class="col-4 px-0 mx-0 tituloF">
+                <p>
+                    <h2><b>BUILD BY TRUCKERS FOR TRUCKERS.</b></h2>
+                    <b>FactorTeck talkes the extra mile to ensure our
+                        factoring services stands out from the rest
+                        Unlike our competitors that come from the 
+                        banking world we were truckers, yes you
+                        heard right we were truckers.</b>
+                </p>
+            </div>
+            <div class="col-4 text-left formulario">
                 <form action="procesar_formulario.php" method="post">
                     <!-- Campo de texto "Names" -->
                     <div class="mb-3">
@@ -101,191 +110,179 @@
                             </label>
                         </div>
                     </div>
-                        <!-- Opciones de selección "Refere" -->
-                <div class="mb-3">
-                    <label for="refere" class="form-label">Refere</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="refere" id="refere_yes" value="yes">
-                        <label class="form-check-label" for="refere_yes">Yes</label>
+                     <!-- Opciones de selección "Refere" -->
+                    <div class="mb-3">
+                        <label for="refere" class="form-label">Refere</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="refere" id="refere_yes" value="yes">
+                            <label class="form-check-label" for="refere_yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="refere" id="refere_no" value="no">
+                            <label class="form-check-label" for="refere_no">No</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="refere" id="refere_no" value="no">
-                        <label class="form-check-label" for="refere_no">No</label>
+
+                    <!-- Campo de texto "Comentarios" -->
+                    <div class="mb-3">
+                        <label for="comentarios" class="form-label">Comentarios</label>
+                        <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
                     </div>
-                </div>
 
-                <!-- Campo de texto "Comentarios" -->
-                <div class="mb-3">
-                    <label for="comentarios" class="form-label">Comentarios</label>
-                    <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
-                </div>
-
-                <!-- Botón de envío -->
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </div>
-  </div>
-
-    <main class="container">
-        <a name=Pnosotros></a>
-        <div class="row nosotros justify-content-center">
-            <div class="col-12 text-center">
-                <h2 class="subtitulo"><span>¿Quienes somos?</span></h2>
-                <h3 class="titulo">Nuestra pasion por las piedras exóticas y la elegancia.</h3>
-                <p>
-                    Nos convierte en la tienda ideal para los amantes de las joyas, la elegancia y el glamur, somos
-                    una tienda comprometidad a sastisfacer las nesecidades del cliente y estar con los estandares mas 
-                    altos de la industria. Diseñamos joyas a la medida de las necesidades de nuestros clientes. 
-                    Nuestros técnicos especializados siempre están dispuestos a asesorarlos con la actitud de cálida.
-                </p>
-                <a href="menu.php" class="enlace">Envia peticiones, quejas o reclamos</a>
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
             </div>
         </div>
+    </div>
 
-        <div class="row productos">
-            <a name=Aproducto></a>
-            <article class="col-12 text-center">
-                <h2 class="subtitulo"><span>Lo que ofrecemos</span></h2>
-                <p class="titulo">Nuestros productos</p>
+    <main class="container">
+        <div class="row justify-content-center flujo">
+            <div class="col-12 text-center">
+                <h4 class="titulo"><spn>Don´t let your cash flow stop you</spn></h4>
                 <p>
-                    
-                    Entre los productos que puedes encontrar en nuestra tienda tenemos anillos de matrimonio, dijes
-                    aretes, anillos, cadenas, pulseras, collares y relojes.
+                    Turn your oustanding invoices into cash quickly and easy
+                </p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row" style="margin-top: 10px; margin-left: 20px;">
+                  <article class="col-8 col-lg-6 py-1">
+                    <div>
+                        <img src="img/display/export.jpg" style="float:left;width: 50%;"> 
+                        <div style="float:right;width: 50%;">
+                            <p><b>Funding for exporters and importers</b></p>
+                            <ul>
+                              <li>Invoice factoring</li>
+                              <li>International factoring</li>
+                              <li>Supply chain finance</li>
+                            </ul>
+                        </div> 
+                    </div>
+                  </article>
+                  <article class="col-8 col-lg-6 py-1">
+                    <div>
+                        <img src="img/display/finanzas.jpg" style="float:left;width: 50%;"> 
+                        <div style="float:right;width: 50%;">
+                            <p><b>Funding for owner-operators and fleet</b></p>
+                            </n>
+                            <p>Freight factoring</p>
+                            <ul>
+                              <li>Transparent fees and terms</li>
+                              <li>Fuel advences</li>
+                              <li>Tms</li>
+                              <li>Express funding</li>
+                            </ul>
+                        </div> 
+                    </div>
+                  </article>
+            </div>
+        </div>
+    </main> 
+
+    <div class="separador text-center text-white">
+        <p><q>The benefits of factoring with FactorTeck</q></p>
+    </div>
+
+    <div class="container">
+        <div class="row productos">
+            <article class="col-12 text-center">
+                <p>
+                    Get an advance on your outsatnding involces. The cash flow you need when you need it.
                 </p>
             </article>
             <div class="col-12">
                 <div class="row justify-content-center">
                     <article class="col-6 col-lg-3 py-1">
                         <figure class="producto">
-                            <img src="img/products/piece-01.jpg" class="img-fluid" alt="">
+                            <h3><b>Manage your cashflow</b></h3>
+                            <img src="img/display/flujoEfectivo.jpg" class="img-fluid" alt="">
                             <figcaption class="overlay">
-                                <p class="overlay-texto">Descripción:
-                                    Anillo en oro amarillo de 18 kilates, con diamante central de 1.01 ct
+                                <p class="overlay-texto">
+                                    Do not wait to have the cash you
+                                    need to continue operating
+                                    trasnform your accounts
+                                    receivable into money
                                 </p>
                             </figcaption>
                         </figure>
                     </article>
 
-                    <article class="col-6 col-lg-3 py-1">
+                    <article class="col-6 col-lg-3 py-1" style="width: max-content;">
                         <figure class="producto">
-                            <img src="img/products/piece-02.jpg" class="img-fluid" alt="">
+                            <h3><b>Forget collections</b></h3>
+                            <img src="img/display/tratos.jpg" style="width: max-content;" class="img-fluid" alt="">
                             <figcaption class="overlay">
-                                <p class="overlay-texto">Descripción:
-                                    Aretes en oro blanco de 18 kilates, con 2 esmeraldas centrales de 0.80 ct
+                                <p class="overlay-texto">
+                                   Streamline the collection of your
+                                   portfolio eliminating administration
+                                   and collection costs
                                 </p>
                             </figcaption>
                         </figure>
                     </article>
 
-                    <article class="col-6 col-lg-3 py-1">
+                    <article class="col-6 col-lg-3 py-1" >
                         <figure class="producto">
-                            <img src="img/products/piece-03.jpg" class="img-fluid" alt="">
+                            <h3><b>Debt free</b></h3>
+                            <img src="img/display/libredeudas.jpg" class="img-fluid" alt="">
                             <figcaption class="overlay">
-                                <p class="overlay-texto">Descripción:
-                                    Pulsera en oro amarillo de 18 kilates, 19 cm. de largo, 2 mm. de ancho
+                                <p class="overlay-texto">
+                                    The funds you need 
+                                    without debit
                                 </p>
                             </figcaption>
                         </figure>
                     </article>
-
-                    <article class="col-6 col-lg-3 py-1">
-                        <figure class="producto">
-                            <img src="img/products/piece-04.jpg" class="img-fluid" alt="">
-                            <figcaption class="overlay">
-                                <p class="overlay-texto">Descripción:
-                                    Gargantilla en oro blanco de 18 kilates, rolo, con esmeralda central de 0.38 ct
-                                </p>
-                            </figcaption>
-                        </figure>
-                    </article>
-                    <form action="matrimonio.html">
-                        <button type="submit" class="d-block btn-productos">Todos los productos</button>
-                    </form>
                 </div>
-            </div>
-        </div>
-    </main> 
-
-    <div class="separador text-center text-white">
-        <p><q>El amor es la alegría de los buenos, la reflexión de los sabios y el asombro de los incrédulos</q></p>
-    </div>
-
-    <div class="container">
-        <div class="row acerca-de justify-content-around">
-            <article class="col-10 col-sm-5">
-                <figure class="text-center">
-                    <img src="img/icons/icon-mision.png" alt="">
-                    <figcaption>
-                        <p>
-                            <strong class="mb-2">Mision</strong>
-                            <div class="w-100"></div>
-                            Hacer que los momentos más importantes de nuestros clientes se conviertan en recuerdos inolvidables a través de las mejores colecciones de joyería, 
-                            argollas de matrimonio, anillos de compromiso y las marcas más reconocidas de relojes.
-                        </p>
-                    </figcaption>
-                </figure>
-            </article>
-
-            <article class="col-10 col-sm-5">
-                <figure class="text-center">
-                    <img src="img/icons/icon-vision.PNG" alt="">
-                    <figcaption>
-                        <p>
-                            <strong class="mb-2">Vison</strong>
-                            <div class="w-100"></div>
-                            Para el año 2050 ampliaremos nuestra presencia en el país con 30 joyerías en 15 ciudades, siendo reconocida 
-                            como la joyeria que por excelencia acompaña a los colombianos en sus mejores momentos.
-                        </p>
-                    </figcaption>
-                </figure>
-            </article>
-        </div>
-    </div>
-
-    <div class="container-fluid px-0 galeria">
-        <div class="row justify-content-center mx-0 px-0">
-            <div class="col-4 px-0 mx-0">
-                <img src="img/display/img-01.jpeg" alt="">
-            </div>
-            <div class="col-4 px-0 mx-0">
-                <img src="img/display/img-02.jpg" alt="">
-            </div>
-            <div class="col-4 px-0 mx-0">
-                <img src="img/display/img-03.jpg" alt="">
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <a name=Acontacto></a>
         <section class="contacto row justify-content-center">
-            <div class="col-12 col-md-9 text-center">
-                <h2 class="subtitulo"><span>Contactanos</span></h2>
-            </div>
-
-            <iframe  class="col-12 col-md-9" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1931.5684065173648!2d-74.1113806579501!3d4.711687562299986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9ecf217f4b9d%3A0xeb17cde969504cb2!2sCentro%20Comercial%20Portal%2080!5e0!3m2!1ses!2sco!4v1604359878616!5m2!1ses!2sco" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
+            <iframe  class="col-12 col-md-9" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15906.493138391423!2d-74.0566965!3d4.6610753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9be6d52e0f2d%3A0xfcb95bce092feb3b!2sRentek%20SAS!5e0!3m2!1ses!2sco!4v1682452412028!5m2!1ses!2sco" 
+            width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             <div class="w-100 mb-4"></div>
-            <div>
-                <p class="border-bottom border-top">
-                    <img src="img/icons/icon-cellphone.png" alt="">Tel:9260435
-                </p>
-            </div>
         </section>
-
-        <footer class="row justify-content-center redes-sociales">
-            <div class="col-auto">
-                <a href="#">
-                    <img src="img/icons/facebook.PNG" alt="">
-                    <img src="img/icons/instagram.PNG" alt="">
-                    <img src="img/icons/twiter.PNG" alt="">
-                    <img src="img/icons/whatssap.PNG" alt="">
-                    <img src="img/icons/Youtube.PNG" alt="">
-                </a>
-            </div>
-        </footer>
     </div>
+
+    <footer class="row justify-content-center redes-sociales">
+        <div class="col-auto">
+            <p>Follow Us:</p>
+            <a href="#">
+                <img src="img/icons/Logo_de_Facebook.png" alt="">
+                <img src="img/icons//instagram-logo-png.png" alt="">
+                <img src="img/icons/logoTwiter.png" alt="">
+                <img src="img/icons/whatssap.PNG" alt="">
+                <img src="img/icons/Youtube_logo.png" alt="">
+            </a>
+        </div>
+    </footer>
+    <footer class="row footer2">
+        <article class="col-6 col-lg-3 py-1">
+            <p>Financial solutions</p>
+            <a href="#">Freight factoring</a>
+            <a href="#">Internacional factoring</a>
+            <a href="#">Factoring</a>
+            <a href="#">Supply chain finance</a>
+        </article>
+        <article class="col-6 col-lg-3 py-1">
+            <p>Company</p>
+            <a href="#">About us</a>
+            <a href="#">Referrals</a>
+        </article>
+        <article class="col-6 col-lg-3 py-1">
+            <p>Resoursces</p>
+            <a href="#">FAQS</a>
+        </article>
+        <article class="col-6 col-lg-3 py-1">
+            <p>Contact us</p>
+            <p>175 SW 7th St. Miami FL 33130 EE.UU</p>
+            <p>(786) 206-3672</p>
+            <p>(786) 206-3674</p>
+        </article>
+    </footer>
 
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
