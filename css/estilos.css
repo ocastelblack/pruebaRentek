@@ -5,13 +5,11 @@
 }
 
 :root {
-    --purple-dark: #170312;
-    --purple-medium: #33032d;
-    --purple-light: #531253;
     --gray-light: #eaeaea;
     --white: #f4fffd;
     --colorFactor: #0d2574;
     --dark: #0c0009;
+    --footer: #dd912e;
 }
 
 
@@ -51,7 +49,7 @@ p{
 .menu2 a {
     display: inline-block;
     transition: .5s ease all;
-    color: var(--dark);
+    color: var(--colorFactort);
     text-decoration: none;
 }
 
@@ -60,30 +58,46 @@ p{
     background-color: var(--colorFactort);
 }
 
-/* AQUI */
-.nosotros {
-    margin-bottom: 60px;
+.imagenFondo {
+    background-image: url('../img/imagenFondoFormulario.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.subtitulo {
-    font-size: 20px;
-    color: var(--purple-dark);
-    font-family: 'Noto Serif', serif;
-    font-weight: 700;
-    z-index: 2;
+.formulario{
+    background-color: rgba(255, 255, 255, 0.8);
+    display:  inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px 20px 30px 40px;
+}
+.formulario button{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: -webkit-fill-available;
+    margin-block: 10px;
+}
+
+.tituloF{
+    color: #ffffff;
+    display:  inline-block;
+    margin-top: 200px;
+}
+
+.flujo{
+    margin-top: 60px;
+}
+
+.flujo .titulo {
+    width: 70%;
+    font-size: 44px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    display: inline-block;
 }
 
-
-.subtitulo span {
-    background-color: var(--gray-light);
-    padding:  0 15px;
-    z-index: 99;
-    position: relative;
-}
-
-.subtitulo::after {
+.titulo::after {
     content: "";
     display:  inline-block;
     height: 2px;
@@ -91,107 +105,13 @@ p{
     background: var(--purple-dark);
     position: relative;
     top: -29px;
-    z-index: 1;
+    z-index: 2;
 }
-
-.nosotros .titulo {
-    width: 70%;
-    font-size: 44px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 50px;
-}
-
-.nosotros .enlace {
-    display:  inline-block;
-    margin-top: 40px;
-    color:  var(--purple-light);
-    font-weight: 700;
-    border-bottom: 1px solid transparent;
-    transition: .3s ease all;
-}
-
-
-.nosotros .enlace:hover {
-    text-decoration: none;
-    letter-spacing: 3px;
-    border-bottom: 1px solid var(--purple-light);
-}
-
-
-.productos {
- background: var(--gray-light);
- padding: 20px;
- margin-bottom: 60px;
-}
-
-
-.productos .titulo {
-    width: 70%;
-    font-size: 44px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 50px;
-}
-
-
-.productos .producto {
-    position: relative;
-    width: 100%;
-}
-
-.producto .overlay {
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--purple-light);
-    overflow: hidden;
-    transition: .5s ease;
-}
-
-
-.productos .producto:hover .overlay {
-    width: 100%;
-    opacity: .8;
-}
-
-.productos .producto .overlay-texto {
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    color: var(--white);
-    font-size: 18px;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-}
-
-.productos .btn-productos {
-    background-color: var(--purple-light);
-    color: #fff;
-    padding: 7px 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-    border: 2px solid transparent;
-    transition: .3s ease;
-}
-
-.productos .btn-productos:hover {
-    background-color: transparent;
-    border: 2px solid var(--purple-light);
-    color: var(--purple-light);
-}
-
-
 
 .separador {
     width: 100%;
     height: 250px;
-    background-image: url('../img/bg-separator.jpeg');
+    background-image: url('../img/display/separdo.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -209,10 +129,55 @@ p{
     padding: 10px;
 }
 
-.acerca-de {
+.productos {
+    background: var(--gray-light);
+    padding: 20px;
     margin-bottom: 60px;
-}
+   }
 
+   .productos .titulo {
+       width: 70%;
+       font-size: 44px;
+       text-transform: uppercase;
+       display: inline-block;
+       margin-bottom: 50px;
+   }
+   
+   
+   .productos .producto {
+       position: relative;
+       width: 100%;
+   }
+   
+   .producto .overlay {
+       width: 0%;
+       height: 100%;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background: var(--colorFactor);
+       overflow: hidden;
+       transition: .5s ease;
+   }
+   
+   
+   .productos .producto:hover .overlay {
+       width: 100%;
+       opacity: .8;
+   }
+   
+   .productos .producto .overlay-texto {
+       top: 50%;
+       left: 50%;
+       position: absolute;
+       color: var(--white);
+       font-size: 18px;
+       transform: translate(-50%, -50%);
+       overflow: hidden;
+       border-top: 1px solid #fff;
+       border-bottom: 1px solid #fff;
+   }
 
 .galeria {
     margin-bottom: 60px;
@@ -232,7 +197,7 @@ p{
 
 .redes-sociales {
     padding: 10px;
-    background-color: var(--purple-light);
+    background-color: var(--footer);
 }
 
 .redes-sociales img {
@@ -247,16 +212,20 @@ p{
     transform: scale(1.2);
 }
 
-.tabla {
+.footer2 {
+    background-color: var(--colorFactor);
+    color: var(--white);
     text-align: center;
-    width: 100%;
-    margin-bottom: 60px;
 }
 
-th, td {
-    border: solid 1px black;
-    padding: 0;
+.footer2 a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
 }
+
+/* AQUI */
 
 @media screen and (max-width: 992px) {
     p {
@@ -275,39 +244,6 @@ th, td {
     .producto .titulo {
         font-size: 30px;
     }
-}
-
-.bad {
-    text-align: center;
-	width: 100%;
-	padding: 12px;
-	background-color: var(--purple-light);
-	color: #fff;
-}
-
-.btn-cliente {
-    background-color: var(--purple-light);
-    color: #fff;
-    padding: 7px 20px;
-    text-transform: uppercase;
-    font-size: 16px;
-    border: 2px solid transparent;
-    transition: .3s ease;
-}
-
-.btn-cliente:hover {
-    background-color: transparent;
-    border: 2px solid var(--purple-light);
-    color: var(--purple-light);
-}
-
-.formulario {
-    margin-bottom: 60px;
-}
-
-.formulario .area {
-    width: 420px;
-    height: 110px;
 }
 
 
